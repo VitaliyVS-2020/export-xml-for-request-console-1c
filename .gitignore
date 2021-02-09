@@ -1,0 +1,18 @@
+#Eclipse project files
+.metadata/
+.metricsapp/
+.metricsapp-tests/
+.JETEmitters/
+.sonarlint/
+#Build targets
+bin/
+target/
+*/bin/
+/.m2/
+*/target/
+#Report directories
+/reports
+*/reports
+#Mac-specific directory that no other operating system needs.
+.DS_Store
+/.recommenders/

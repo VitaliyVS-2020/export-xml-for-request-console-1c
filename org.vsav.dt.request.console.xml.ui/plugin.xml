@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:com._1c.g5.v8.dt.navigator.ui.navigator.popup?after=group.generate">
+         <command
+               commandId="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:#BslEditorContext?endof=group.open">
+         <command
+               commandId="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:#TextEditorContext?after=group.open">
+         <command
+               commandId="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.vsav.dt.request.console.xml.ui.UiExecutableExtensionFactory:org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
+            id="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
+            name="export XML for request console">
+      </command>
+   </extension>
+
+</plugin>
