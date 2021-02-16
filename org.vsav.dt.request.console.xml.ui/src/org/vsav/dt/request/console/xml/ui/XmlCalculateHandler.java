@@ -18,8 +18,6 @@ import org.eclipse.debug.ui.DebugUITools;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.ITextViewer;
-import org.eclipse.swt.dnd.Clipboard;
-import org.eclipse.swt.dnd.TextTransfer;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IWorkbenchPart;
@@ -142,15 +140,7 @@ public class XmlCalculateHandler
 
         String cleanTextForRequest = textForRequest.substring(1, textForRequest.length() - 1);
 
-        Display display = getDisplay();
-
-        display.asyncExec(() -> {
-            Clipboard clipboard = new Clipboard(display);
-
-            TextTransfer[] textTransfer = { TextTransfer.getInstance() };
-            clipboard.setContents(new Object[] { cleanTextForRequest }, textTransfer);
-            clipboard.dispose();
-        });
+        Notification.copyClipboard(cleanTextForRequest);
     }
 
     private String getText(IXtextDocument doc, ITextViewer viewer)
