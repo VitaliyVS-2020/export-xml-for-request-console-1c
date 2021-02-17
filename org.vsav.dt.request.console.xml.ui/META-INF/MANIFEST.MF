@@ -15,6 +15,7 @@ Bundle-Activator: org.vsav.dt.request.console.xml.ui.Activator
 Bundle-ActivationPolicy: lazy
 Import-Package: com._1c.g5.v8.bm.core;version="7.4.0",
  com._1c.g5.v8.bm.integration;version="9.0.200",
+ com._1c.g5.v8.dt.bsl.model;version="4.0.0",
  com._1c.g5.v8.dt.bsl.ui.menu;version="5.0.0",
  com._1c.g5.v8.dt.common.ui;version="3.3.0",
  com._1c.g5.v8.dt.core.platform;version="10.2.0",
