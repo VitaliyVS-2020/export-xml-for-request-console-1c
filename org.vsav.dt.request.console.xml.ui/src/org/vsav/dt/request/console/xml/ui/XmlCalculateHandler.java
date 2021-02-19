@@ -19,7 +19,6 @@ public class XmlCalculateHandler
     private EObjectAtOffsetHelper offsetHelper;
     @Inject
     private IConfigurationProvider configurationProvider;
-    //private BslDebugDispatchingEObjectTextHover dispatchingHover;
     private IAction action;
 
     @Override

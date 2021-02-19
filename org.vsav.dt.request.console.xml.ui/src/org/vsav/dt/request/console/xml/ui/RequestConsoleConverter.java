@@ -50,36 +50,40 @@ public class RequestConsoleConverter
             {
                 Object semanticObject = offsetHelper.resolveElementAt(state, selection.getOffset());
 
-                if (semanticObject instanceof StaticFeatureAccess)
-                {
-                    //Элемент модели, соответствующий именному выражению, к которому обращаются НЕ (НЕ!!!) через “точку”.
-                    //Данный элемент унаследовал все свойства и методы от com._1c.g5.v8.dt.bsl.model.FeatureAccess
-                    evaluateExpressionDebug(((StaticFeatureAccess)semanticObject).getName());
-                }
-                else if (semanticObject instanceof DynamicFeatureAccess)
-                {
-                    //Элемент модели, соответствующий именному выражению, к которому обращаются через “точку”.
-                    //Данный элемент унаследовал все свойства и методы от com._1c.g5.v8.dt.bsl.model.FeatureAccess
-                    Object tex1 = null;
-                }
-                else
-                {
-                    //Ничего evaluateExpressionDebug(String )
-                }
-
+                String expressionName = getExpressionFeatureAccess(semanticObject);
+                evaluateExpressionDebug(expressionName);
             }
-
         });
     }
 
+    private static String getExpressionFeatureAccess(Object semanticObject)
+    {
+        if (semanticObject instanceof StaticFeatureAccess)
+        {
+            //Элемент модели, соответствующий именному выражению, к которому обращаются НЕ (НЕ!!!) через “точку”.
+            //Данный элемент унаследовал все свойства и методы от com._1c.g5.v8.dt.bsl.model.FeatureAccess
+            return ((StaticFeatureAccess)semanticObject).getName();
+        }
+        else if (semanticObject instanceof DynamicFeatureAccess)
+        {
+            //Элемент модели, соответствующий именному выражению, к которому обращаются через “точку”.
+            //Данный элемент унаследовал все свойства и методы от com._1c.g5.v8.dt.bsl.model.FeatureAccess
+            return getExpressionFeatureAccess(((DynamicFeatureAccess)semanticObject).getSource()) + "."
+                + ((DynamicFeatureAccess)semanticObject).getName();
+        }
+        else
+        {
+            return "";
+        }
+
+    }
     /**
      * @param name
      */
-    protected void evaluateExpressionDebug(String text)
+    protected void evaluateExpressionDebug(String textVariable)
     {
 
-        this.variable = text;
-        this.expression = "ОбщегоНазначения.ЗапросВСтрокуXML(" + text + ")";
+        this.variable = textVariable;
 
         final IBslStackFrame frame = this.getFrame();
 
@@ -88,9 +92,8 @@ public class RequestConsoleConverter
 
             IRuntimeDebugClientTarget targetDebug = frame.getDebugTarget();
 
-            BslValuePath path = new BslValuePath(this.expression);
+            BslValuePath path = new BslValuePath(this.variable);
 
-            // generate random UUID to have access to child evaluation nodes later (if we want)
             UUID expressionUuid = UUID.randomUUID();
 
             int maxTestSize = 4000;
@@ -117,7 +120,6 @@ public class RequestConsoleConverter
             catch (DebugException e)
             {
                 e.printStackTrace();
-                //DebugCorePlugin.log((Throwable)e);
             }
 
         }
@@ -130,26 +132,26 @@ public class RequestConsoleConverter
     private void requestResult(CalculationResultBaseData result)
     {
 
-        //!! ПРОВЕРИТ  String   getLocalVariableName()
-
         String TypeName = result.getResultValueInfo().getTypeName();
 
         if ("ДинамическийСписок".equals(TypeName))
         {
-            // in progress...
+            // Пример: ОбщегоНазначения.ЗначениеВСтрокуXML(Новый Структура("Текст, Параметры", Список.ТекстЗапроса, Список.Параметры)) (char)34 = "
+            this.expression = "ОбщегоНазначения.ЗапросВСтрокуXML(Новый Структура(" + (char)34 + "Текст, Параметры"
+                + (char)34 + ", " + this.variable + ".ТекстЗапроса, " + this.variable + ".Параметры))";
+            evaluateExpressionDebug(this.expression);
         }
         else if ("Запрос".equals(TypeName))
         {
-            // in progress...
+            this.expression = "ОбщегоНазначения.ЗапросВСтрокуXML(" + this.variable + ")";
+            evaluateExpressionDebug(this.expression);
         }
         else if ("Строка".equals(TypeName))
         {
             String textForRequest = presentation(result.getResultValueInfo().getPres());
             String cleanTextForRequest = textForRequest.substring(1, textForRequest.length() - 1);
-
             Notification.copyClipboard(cleanTextForRequest);
         }
-
         else
         {
             //Сообщим об ошибке
