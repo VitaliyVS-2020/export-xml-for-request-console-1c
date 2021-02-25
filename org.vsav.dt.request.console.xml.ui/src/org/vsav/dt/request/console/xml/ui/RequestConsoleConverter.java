@@ -10,7 +10,13 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.debug.core.DebugException;
 import org.eclipse.debug.core.model.IStackFrame;
 import org.eclipse.debug.ui.DebugUITools;
+import org.eclipse.jface.dialogs.IDialogConstants;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.text.ITextSelection;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.xtext.resource.EObjectAtOffsetHelper;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.XtextEditor;
@@ -155,6 +161,23 @@ public class RequestConsoleConverter
         else
         {
             //Сообщим об ошибке
+            Display.getDefault().asyncExec(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+
+                    MessageDialog dialog = new MessageDialog(shell, Messages.RequestConsoleXml_variable_exception,
+                        (Image)null, Messages.RequestConsoleXml_variable_exception, 2,
+                        new String[] { IDialogConstants.OK_LABEL }, 0);
+
+                    if (dialog.open() != 0)
+                    {
+                        //write logs
+                    }
+                }
+            });
         }
 
     }
