@@ -5,23 +5,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="popup:com._1c.g5.v8.dt.navigator.ui.navigator.popup?after=group.generate">
-         <command
-               commandId="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
-               style="push">
-         </command>
-      </menuContribution>
-      <menuContribution
-            allPopups="false"
-            locationURI="popup:#BslEditorContext?endof=group.open">
-         <command
-               commandId="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
-               style="push">
-         </command>
-      </menuContribution>
-      <menuContribution
-            allPopups="false"
-            locationURI="popup:#TextEditorContext?after=group.open">
+            locationURI="popup:#BslEditorContext?after=group.debugging">
          <command
                commandId="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
                style="push">
