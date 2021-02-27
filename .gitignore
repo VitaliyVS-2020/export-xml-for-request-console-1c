@@ -6,10 +6,8 @@
 .sonarlint/
 #Build targets
 bin/
-target/
 */bin/
 /.m2/
-*/target/
 #Report directories
 /reports
 */reports
