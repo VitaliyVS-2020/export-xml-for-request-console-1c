@@ -4,7 +4,7 @@
     <locations>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
             <repository location="https://edt.1c.ru/downloads/releases/ruby/2021.1/"/>
-            <unit id="com._1c.g5.aef.feature.feature.group" version="1.12.0.v202102251356"/>
+            <unit id="com._1c.g5.aef.feature.feature.group" version="1.12.0.v202103050750"/>
             <unit id="com._1c.g5.commons.feature.group" version="3.4.0.v202101131731"/>
             <unit id="com._1c.g5.edt.license.feature.group" version="2.0.0.v1"/>
             <unit id="com._1c.g5.gumtree.feature.feature.group" version="3.2.0.v202012070858"/>
@@ -13,39 +13,39 @@
             <unit id="com._1c.g5.jface.feature.feature.group" version="2.1.400.v202101270646"/>
             <unit id="com._1c.g5.license.feature.group" version="1.0.0.v20150216-1700"/>
             <unit id="com._1c.g5.lwt.feature.feature.group" version="5.4.0.v202101270646"/>
-            <unit id="com._1c.g5.properties.ui.feature.feature.group" version="1.12.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.bp.scheme.feature.feature.group" version="1.16.0.v202102251356"/>
+            <unit id="com._1c.g5.properties.ui.feature.feature.group" version="1.12.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.bp.scheme.feature.feature.group" version="1.16.0.v202103050750"/>
             <unit id="com._1c.g5.v8.dt.cli.feature.feature.group" version="0.5.0.v202102180838"/>
             <unit id="com._1c.g5.v8.dt.diagram.framework.feature.feature.group" version="4.0.0.v202001150826"/>
-            <unit id="com._1c.g5.v8.dt.erd.feature.feature.group" version="3.13.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.eventhandlers.feature.feature.group" version="1.16.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.extension.feature.group" version="1.12.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.feature.feature.group" version="1.23.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.geographicalschema.feature.feature.group" version="2.13.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.handly.feature.feature.group" version="1.5.0.514"/>
+            <unit id="com._1c.g5.v8.dt.erd.feature.feature.group" version="3.13.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.eventhandlers.feature.feature.group" version="1.16.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.extension.feature.group" version="1.12.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.feature.feature.group" version="1.23.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.geographicalschema.feature.feature.group" version="2.13.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.handly.feature.feature.group" version="1.5.0.521"/>
             <unit id="com._1c.g5.v8.dt.markermatcher.feature.feature.group" version="1.1.0.v201912091233"/>
-            <unit id="com._1c.g5.v8.dt.platform.services.mobile.feature.feature.group" version="1.15.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.10.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.11.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.12.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.13.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.14.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.15.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.16.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.17.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.18.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.8.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.9.feature.feature.group" version="0.14.0.v202102251631"/>
-            <unit id="com._1c.g5.v8.dt.product.docs.feature.feature.group" version="1.23.0.v202102251249"/>
-            <unit id="com._1c.g5.v8.dt.product.feature.feature.group" version="1.23.0.514"/>
-            <unit id="com._1c.g5.v8.dt.profiling.feature.feature.group" version="3.14.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.rcp" version="1.23.0.514"/>
-            <unit id="com._1c.g5.v8.dt.ring.feature.feature.group" version="1.23.0.514"/>
-            <unit id="com._1c.g5.v8.dt.testing.feature.group" version="5.10.0.v202102251356"/>
-            <unit id="com._1c.g5.v8.dt.thirdparty.feature.group" version="1.23.0.514"/>
-            <unit id="com._1c.g5.v8.dt.wst.feature.group" version="4.6.0.514"/>
-            <unit id="com._1c.g5.v8.dt.xtext.runtime.feature.group" version="2.24.0.514"/>
-            <unit id="com._1c.g5.v8.dt.xtext.ui.feature.group" version="2.24.0.514"/>
+            <unit id="com._1c.g5.v8.dt.platform.services.mobile.feature.feature.group" version="1.15.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.10.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.11.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.12.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.13.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.14.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.15.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.16.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.17.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.18.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.8.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.9.feature.feature.group" version="0.14.0.v202103050401"/>
+            <unit id="com._1c.g5.v8.dt.product.docs.feature.feature.group" version="1.23.0.v202103090853"/>
+            <unit id="com._1c.g5.v8.dt.product.feature.feature.group" version="1.23.0.521"/>
+            <unit id="com._1c.g5.v8.dt.profiling.feature.feature.group" version="3.14.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.rcp" version="1.23.0.521"/>
+            <unit id="com._1c.g5.v8.dt.ring.feature.feature.group" version="1.23.0.521"/>
+            <unit id="com._1c.g5.v8.dt.testing.feature.group" version="5.10.0.v202103050750"/>
+            <unit id="com._1c.g5.v8.dt.thirdparty.feature.group" version="1.23.0.521"/>
+            <unit id="com._1c.g5.v8.dt.wst.feature.group" version="4.6.0.521"/>
+            <unit id="com._1c.g5.v8.dt.xtext.runtime.feature.group" version="2.24.0.521"/>
+            <unit id="com._1c.g5.v8.dt.xtext.ui.feature.group" version="2.24.0.521"/>
             <unit id="com._1c.g5.wiring.feature.feature.group" version="2.3.0.v202006241109"/>
             <unit id="com.company1c.link.agent.core.feature.feature.group" version="3.0.2"/>
             <unit id="com.company1c.link.agent.dependencies.feature.feature.group" version="1.0.0"/>
@@ -53,18 +53,18 @@
             <unit id="com.e1c.g5.v8.dt.bsl.formatter.feature.feature.group" version="1.0.500.v202102190932"/>
             <unit id="com.e1c.g5.v8.dt.formatter.feature.feature.group" version="1.0.500.v202102190932"/>
             <unit id="com.e1c.g5.v8.dt.formatter.ui.feature.feature.group" version="1.0.500.v202102190932"/>
-            <unit id="com.e1c.g5.v8.dt.gsw.feature.feature.group" version="1.0.700.v202102251356"/>
-            <unit id="com.e1c.g5.v8.dt.mw.feature.feature.group" version="1.3.0.v202102251356"/>
+            <unit id="com.e1c.g5.v8.dt.gsw.feature.feature.group" version="1.0.700.v202103050750"/>
+            <unit id="com.e1c.g5.v8.dt.mw.feature.feature.group" version="1.3.0.v202103050750"/>
             <unit id="de.itemis.xtext.antlr.feature.feature.group" version="2.1.1.v201405091103"/>
             <unit id="openjfx.swt.feature.feature.group" version="11.0.0.201901231300"/>
             <unit id="org.aspectj.feature.group" version="1.9.6.202012111622"/>
             <unit id="org.aspectj.source.feature.group" version="1.9.6.202012111622"/>
-            <unit id="org.eclipse.babel.nls_eclipse_ru.feature.group" version="4.18.0.v20201225020001"/>
-            <unit id="org.eclipse.babel.nls_modeling.emf_ru.feature.group" version="4.18.0.v20201225020001"/>
-            <unit id="org.eclipse.babel.nls_modeling.tmf.xtext_ru.feature.group" version="4.18.0.v20201225020001"/>
-            <unit id="org.eclipse.babel.nls_technology.egit_ru.feature.group" version="4.18.0.v20201225020001"/>
-            <unit id="org.eclipse.babel.nls_technology.jgit_ru.feature.group" version="4.18.0.v20201225020001"/>
-            <unit id="org.eclipse.babel.nls_webtools_ru.feature.group" version="4.18.0.v20201225020001"/>
+            <unit id="org.eclipse.babel.nls_eclipse_ru.feature.group" version="4.18.0.v20210305020001"/>
+            <unit id="org.eclipse.babel.nls_modeling.emf_ru.feature.group" version="4.18.0.v20210305020001"/>
+            <unit id="org.eclipse.babel.nls_modeling.tmf.xtext_ru.feature.group" version="4.18.0.v20210305020001"/>
+            <unit id="org.eclipse.babel.nls_technology.egit_ru.feature.group" version="4.18.0.v20210305020001"/>
+            <unit id="org.eclipse.babel.nls_technology.jgit_ru.feature.group" version="4.18.0.v20210305020001"/>
+            <unit id="org.eclipse.babel.nls_webtools_ru.feature.group" version="4.18.0.v20210305020001"/>
             <unit id="org.eclipse.draw2d.feature.group" version="3.10.100.201606061308"/>
             <unit id="org.eclipse.draw2d.source.feature.group" version="3.10.100.201606061308"/>
             <unit id="org.eclipse.e4.rcp.feature.group" version="4.19.0.v20210105-2303"/>
@@ -153,13 +153,13 @@
             <unit id="org.eclipse.platform.source.feature.group" version="4.19.0.v20210106-1800"/>
             <unit id="org.eclipse.rcp.feature.group" version="4.19.0.v20210106-1800"/>
             <unit id="org.eclipse.rcp.source.feature.group" version="4.19.0.v20210106-1800"/>
-            <unit id="org.eclipse.sources.feature.group" version="4.11.0.514"/>
+            <unit id="org.eclipse.sources.feature.group" version="4.11.0.521"/>
             <unit id="org.eclipse.userstorage.feature.group" version="1.2.0.v20191120-1614"/>
             <unit id="org.eclipse.xsd.edit.feature.group" version="2.13.0.v20200723-0820"/>
             <unit id="org.eclipse.xsd.feature.group" version="2.19.0.v20200917-0747"/>
             <unit id="org.eclipse.xsd.source.feature.group" version="2.19.0.v20200917-0747"/>
             <unit id="org.eclipse.xtext.xbase.lib.feature.group" version="2.24.0.v20201130-0912"/>
-            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.19.feature.feature.group" version="0.14.0.v202102251631"/>
+            <unit id="com._1c.g5.v8.dt.platform.support_v8.3.19.feature.feature.group" version="0.14.0.v202103050401"/>
             <unit id="com.make.chromium.cef.feature.feature.group" version="0.4.0.201908130254"/>
             <unit id="org.eclipse.swt.chromium.feature.feature.group" version="0.10.2.201908130308"/>
         </location>
