@@ -17,7 +17,7 @@
       <command
             defaultHandler="org.vsav.dt.request.console.xml.ui.UiExecutableExtensionFactory:org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
             id="org.vsav.dt.request.console.xml.ui.XmlCalculateHandler"
-            name="export XML for request console">
+            name="%command.name">
       </command>
    </extension>
 

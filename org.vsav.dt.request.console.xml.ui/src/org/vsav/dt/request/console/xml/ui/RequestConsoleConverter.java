@@ -1,6 +1,7 @@
 package org.vsav.dt.request.console.xml.ui;
 
 import java.nio.charset.StandardCharsets;
+import java.text.MessageFormat;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
@@ -140,19 +141,19 @@ public class RequestConsoleConverter
 
         String TypeName = result.getResultValueInfo().getTypeName();
 
-        if ("ДинамическийСписок".equals(TypeName))
+        if ("ДинамическийСписок".equals(TypeName) || "DynamicList".equals(TypeName))
         {
             // Пример: ОбщегоНазначения.ЗначениеВСтрокуXML(Новый Структура("Текст, Параметры", Список.ТекстЗапроса, Список.Параметры)) (char)34 = "
             this.expression = "ОбщегоНазначения.ЗапросВСтрокуXML(Новый Структура(" + (char)34 + "Текст, Параметры"
                 + (char)34 + ", " + this.variable + ".ТекстЗапроса, " + this.variable + ".Параметры))";
             evaluateExpressionDebug(this.expression);
         }
-        else if ("Запрос".equals(TypeName))
+        else if ("Запрос".equals(TypeName) || "Query".equals(TypeName))
         {
             this.expression = "ОбщегоНазначения.ЗапросВСтрокуXML(" + this.variable + ")";
             evaluateExpressionDebug(this.expression);
         }
-        else if ("Строка".equals(TypeName))
+        else if ("Строка".equals(TypeName) || "String".equals(TypeName))
         {
             String textForRequest = presentation(result.getResultValueInfo().getPres());
             String cleanTextForRequest = textForRequest.substring(1, textForRequest.length() - 1);
@@ -168,8 +169,11 @@ public class RequestConsoleConverter
                 {
                     Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
 
-                    MessageDialog dialog = new MessageDialog(shell, Messages.RequestConsoleXml_variable_exception,
-                        (Image)null, Messages.RequestConsoleXml_variable_exception, 2,
+                    String messageVariableException = MessageFormat
+                        .format(Messages.RequestConsoleXml_dialog_message_not_supported_variable_type_0, TypeName);
+                    MessageDialog dialog =
+                        new MessageDialog(shell, Messages.RequestConsoleXml_dialog_title_not_supported_variable_type,
+                            (Image)null, messageVariableException, 2,
                         new String[] { IDialogConstants.OK_LABEL }, 0);
 
                     if (dialog.open() != 0)
